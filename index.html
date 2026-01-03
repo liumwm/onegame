@@ -1,0 +1,75 @@
+<html>
+ <head>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>躲小球</title>
+  <style>
+    canvas{
+      background-color:#006EFF;
+      //box-shadow:1px 1px 0.5px 1px rgba(0,0,0,0.5)
+      }
+    button{
+      position:relative;
+      border:2px solid red;
+      border-radius:6px;
+      background-color:#ffffff;
+      color:blue;
+      box-shadow:1px 1px 1px 1px rgba(0,0,0,0.5);
+      transition:all 0.2s;
+      }
+    button:active{
+      background-color:gray;
+      transform:scale(0.95);
+      }
+    button[disabled="true"]{
+      background-color:gray;
+      }
+    *{
+      user-select:none;
+      }
+    .b{
+      width:30px;
+      height:30px;
+      }
+     html, body{
+       overflow:hidden;
+       }
+     #kz *:not(#ition,#yg){
+       box-shadow:1.5px 1.5px 1.5px 1.5px rgba(0,0,0,0.8);
+       }
+     #yg{
+       box-shadow:1px 1px 1px 1px;
+       }
+  </style>
+ </head>
+ <body style="background-color:aqua;">
+ <div style="border:2px solid orange;border-radius:10px;background-color:orange;padding:2px;box-shadow:1px 1px 1px 1px rgba(0,0,0,0.5);width:90vw">
+  <div id="lmdlook" style="opacity:0.5;position:absolute;background-color:blue;"></div>
+  <div><b><p id="fs" style="position:absolute;left:16px;top:0px;color:yellow;font-size:13px;"></p></b> <b><p id="zgfs" style="position:absolute;color:yellow;font-size:8px;top:20px;"></p></b> <b><p id="bcdf" style="position:absolute;color:yellow;top:30;font-size:8px;"></p></b>
+   <canvas id="ck" width="1200" height="1200"></canvas>
+  </div> <button id="ks" style="display:block;" onclick="if(yx){yx=false;document.getElementById('ks').innerHTML='开始游戏'} else{yx=true;document.getElementById('ks').innerHTML='暂停游戏';if(dr.length===0){creat();x=bc/2;y=bc/2;document.getElementById('zgfs').innerHTML='';document.getElementById('bcdf').innerHTML=''}}">开始游戏</button>
+  <div id="kz" style="position:absolute;left:200;top:300;z-index:999;">
+   <div id="dz" style="opacity:0.8;width:100px;height:100px;background-color:#808080;border-radius:50px;">
+    <div id="ition" style="position:relative;top:30;left:30;">
+     <div id="yg" style="opacity:0.8;position:relative;width:40px;height:40px;background-color:#c0c0c0;border-radius:20px;">
+     </div>
+    </div>
+   </div>
+  </div>
+  <div style="position:absolute;top:85%;left:70%;z-index:99;"><button class="b" onclick="if(dx1<100){dx1+=2}">+</button> <button class="b" onclick="if(dx1>18){dx1-=2}">-</button>
+  </div> <button id="diy" onclick="if(diyy){diyy=false;document.getElementById('diy').innerHTML='自定义按钮位置:off'} else{diyy=true;document.getElementById('diy').innerHTML='自定义按钮位置:on'}">自定义按钮位置:off</button>
+  <div style="height:20px;">
+  <input id="nd" type="number" placeholder="定义所有绿色小球的Y轴向量" style="user-select:none;border-radius:6px;"><input type="submit" value="ok" onclick="shez();" style="border-radius:6px;color:blue;" disabled="true">
+  </div>
+  <div style="position:relative;">
+  <p id="lmdp" style="position:relative;top:-5px;display:inline-block;font-size:13px;color:orangered;">遥感灵敏度:20</p>
+  <br><input id="lmd" type="range" min="0" max="40" style="position:relative;top:-20px;overflow:auto;"/>
+  </div>
+  <!--button id="xr" onclick="xrc()" disabled="true">削弱追踪球</button-->
+  <p id="cs"></p>
+  </div>
+  <div style="position:absolute;top:80%;z-index:-1;"><i><p style="color:aqua;font-size:10px;">感谢游玩<br><strong>game by liumwm</strong><br></p></i>
+  </div>
+  <script src="game_code.js"></script>
+  <script src="b.js"></script>
+ </body>
+</html>
